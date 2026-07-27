@@ -1,5 +1,7 @@
 use crate::width::BitWidth;
 
+/// Indicates element slot ordering for a byte. Used to specify the byte ordering within an array,
+/// and the byte ordering for element input/output. See [`Lsb`] and [`Msb`].
 pub trait BitOrd<W>: Clone + Copy {
     /// An aligned bitmask of the given [`PackWidth`].
     const MASK: u8;
@@ -22,6 +24,7 @@ pub trait BitOrd<W>: Clone + Copy {
     fn slot_to_bound(slot_mask: u8, mask: u8) -> u8;
 }
 
+/// Least Significant Bit [`BitOrd`].
 #[derive(Clone, Copy)]
 pub enum Lsb {}
 
@@ -39,6 +42,7 @@ impl<W: BitWidth> BitOrd<W> for Lsb {
     }
 }
 
+/// Most Significant Bit [`BitOrd`].
 #[derive(Clone, Copy)]
 pub enum Msb {}
 

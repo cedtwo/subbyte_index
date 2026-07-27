@@ -3,9 +3,7 @@ use std::marker::PhantomData;
 use crate::ord::BitOrd;
 use crate::width::BitWidth;
 
-/// # SubByteIter
-///
-/// Immutable bit subset range iterator.
+/// Immutable subbyte range iterator.
 pub struct SubByteIter<'a, W, AOrd, OOrd> {
     /// The byte slice range.
     slice: &'a [u8],

@@ -21,7 +21,6 @@ and the array and output [`BitOrd`] respectively. Indices support `usize` and `u
 ```rust
 # use subbyte_index::SubByteIndex;
 # use subbyte_index::{Msb, Lsb, W2, W4};
-
 // A two byte array, represented as two bit subsets in the following operations.
 let array_w2 = [0b_00_01_10_11, 0b_11_10_01_00];
 // Msb indices:     0  1  2  3      4  5  6  7
@@ -54,7 +53,6 @@ index range.
 ```rust
 # use subbyte_index::{SubByteIndex, SubByteIndexMut};
 # use subbyte_index::{Msb, Lsb, W2, W4};
-
 // An 8 byte vector, represented as four bit subsets in the following operations.
 let mut array_w4 = vec![0; 8];
 

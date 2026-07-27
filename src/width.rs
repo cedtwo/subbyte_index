@@ -1,8 +1,7 @@
 use std::fmt::Debug;
 
-/// # PackWidth
-///
-///
+/// Indicates how many bits an array element occupies. Affects indexing as well as filtering out all
+/// other bits. See [`W2`] and [`W4`].
 pub trait BitWidth: Debug + Clone + Copy {
     /// The number of bits in the bitpack.
     const WIDTH: usize;
@@ -14,6 +13,7 @@ pub trait BitWidth: Debug + Clone + Copy {
     const N_SLOTS: usize = 8 / Self::WIDTH;
 }
 
+/// Indicates a bit-width of `2`.
 #[derive(Debug, Clone, Copy)]
 pub enum W2 {}
 
@@ -21,6 +21,7 @@ impl BitWidth for W2 {
     const WIDTH: usize = 2;
 }
 
+/// Indicates a bit-width of `4`.
 #[derive(Debug, Clone, Copy)]
 pub enum W4 {}
 
