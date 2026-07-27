@@ -1,0 +1,12 @@
+[package]
+name = "subbyte_index"
+authors = ["Christopher Edward Dawn"]
+version = "0.1.0"
+edition = "2024"
+description = "Bitfield array/vector indexing, mutation and alignment."
+readme = "README.md"
+repository = "https://github.com/cedtwo/subbyte_index.git"
+license = "MIT OR Apache-2.0"
+keywords = ["bitfield", "pack", "packed", "array", "vec"]
+categories = ["compression", "data-structures", "parsing"]
+
